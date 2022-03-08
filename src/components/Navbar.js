@@ -1,23 +1,45 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
 	return (
-		<nav className="h-auto bg-black">
-			<div className="flex flex-row text-white justify-between py-3">
-				<button href="#" className="font-fontlogo text-5xl ">
+		<nav>
+			<div className="flex text-white justify-between items-center h-16 relative">
+				<Link to="/" className="font-fontlogo text-5xl pl-16">
 					Raih<span className="italic text-red">Asa</span>
-				</button>
-				<div className="flex flex-row justify-around my-auto">
-					<button href="#" className="text-l px-12 ">
+				</Link>
+				<div className="px-4 cursor-pointer md:hidden">
+					<svg
+						className="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth={2}
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					</svg>
+				</div>
+				<div className="pr-8 md:block hidden">
+					<Link to="/" className="text-l py-4 px-16">
 						Home
-					</button>
-					<button href="#" className="text-l px-12 ">
+					</Link>
+					<Link to="/" className="text-l py-4 px-16">
 						About us
-					</button>
-					<button href="#" className="text-l px-12 ">
+					</Link>
+					<Link to="/" className="text-l py-4 px-16">
 						Contact
-					</button>
-					<button href="#" className="text-l px-12 ">
+					</Link>
+					<Link
+						to="/"
+						className="text-l my-2 mx-8 py-2 px-8 border-2 border-white rounded-md"
+					>
 						Login
-					</button>
+					</Link>
 				</div>
 			</div>
 		</nav>
